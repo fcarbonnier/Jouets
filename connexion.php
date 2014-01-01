@@ -3,14 +3,17 @@
 	define('USER', 'root');
 	define('MDP', 'joliverie');
 		
-	$cnx = new PDO($source, $user, $pass);
-	$cnx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+//	$cnx = new PDO($source, $user, $pass);
+//	$cnx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
 	// $connect_db=mysql_connect($host,$user,$pass);
 	// mysql_select_db($base ,$connect_db);
 	
-    if (!isset($connection) || $connection != null) {
-        $connexion = connect();
+//    if (!isset($connection) || $connection != null) {
+//        $connexion = connect();
+//    }
+    if (!isset($cnx) || $cnx != null) {
+        $cnx = connect();
     }
 
 // connexion Ã  la base
