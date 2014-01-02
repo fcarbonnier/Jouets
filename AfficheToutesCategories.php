@@ -12,7 +12,7 @@
         $ok = false;
     }
     $titre = "Liste des categories";
-    include("./vue/entete.php");
+    include("entete.php");
     if($ok){
      
         echo '<table><tr><th classe="libelle">libellé </th><th classe="id">identifiant</th></tr>';
