@@ -27,4 +27,44 @@ function connect() {
     }
     return $connexion;
 }
+// liste des categories
+function getLesCategories($conn) {
+    $sql = "SELECT * FROM CATEGORIE";
+    $stmt = $conn->query($sql);
+    if (!$stmt) {
+        $retour = false;
+    } else {
+        $retour = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    return $retour;
+}
+
+// obtenir une categorie
+function getUneCategorie($conn, $id) {
+    $sql = "SELECT * FROM CATEGORIE WHERE id_cat =:id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute((array(':id' => $id)));
+    $habitant = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $categorie;
+}
+// liste des categories
+function getLesProduits($conn) {
+    $sql = "SELECT * FROM PRODUIT";
+    $stmt = $conn->query($sql);
+    if (!$stmt) {
+        $retour = false;
+    } else {
+        $retour = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    return $retour;
+}
+
+// obtenir une categorie
+function getUnProduit($conn, $id) {
+    $sql = "SELECT * FROM PRODUIT WHERE id_prod =:id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute((array(':id' => $id)));
+    $habitant = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $produit;
+}
 ?>

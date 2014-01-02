@@ -1,11 +1,7 @@
 <HTML>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- 	<?PHP
- 		include ('connexion.php');
- 		
-	?>
-	<head>
-		<link href="jouets.css" rel="stylesheet" media="all" type="text/css"> 
+        <head>
+		<link href="css/jouets.css" rel="stylesheet" media="all" type="text/css"> 
 	</head>
 	<BODY>
 		<DIV id="en_tete"></DIV>
@@ -24,7 +20,7 @@
 			<p><h4> Attention certaines pages ne sont pas fournies car  elles feront l'objet d'un développement ultérieur </h4> </p>
 			<BR><BR>
 
-		<div id="corps">
+		<div id="Corps">
 			<h2>Super site</h2>
 			<p>
 			Bienvenue sur votre futur super site !<br>
